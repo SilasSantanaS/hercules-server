@@ -47,7 +47,7 @@ mongoose
   .catch((err) => console.log(err));
 
 server
-  .listen()
+  .listen({ port: process.env.PORT || 4000 })
   .then(({ url }) => {
     console.log(`Server connected in ${url}`);
   })
